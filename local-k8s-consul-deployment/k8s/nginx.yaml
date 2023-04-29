@@ -119,3 +119,8 @@ spec:
             - name: config
               mountPath: /etc/nginx/conf.d
               readOnly: true
+        - name: consul-template
+          image: hashicorp/consul-template:0.29
+          args:
+            # # - '-config=/opt/conf/consul-template/c
+            - '-consul-addr=https://40.88.229.203'

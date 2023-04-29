@@ -43,7 +43,7 @@ spec:
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "9102"
-        consul.hashicorp.com/connect-inject: "true"
+        # consul.hashicorp.com/connect-inject: "true"
     spec:
       serviceAccountName: frontend
       containers:
@@ -59,3 +59,8 @@ spec:
           # securityContext:
           #   allowPrivilegeEscalation: false
           #   runAsUser: 0
+        # - name: consul-template
+          # image: hashicorp/consul-template:0.29
+          # args:
+            # - '-config=/opt/conf/consul-template/consul-template.conf'
+            # - '-consul-addr=https://40.88.229.203'
